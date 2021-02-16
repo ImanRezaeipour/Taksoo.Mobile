@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taksoo.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+       
+            <Color x:Key="DefaultBackgroundColor">White</Color>
+            <Color x:Key="HeaderBackgroundColor">#e74c3c</Color>
+            <Color x:Key="WhiteTextColor">#ffffff</Color>
+            <Color x:Key="BlackTextColor">#2C3E50</Color>
+            <Color x:Key="CountDownBackgroundColor">#95a5a6</Color>
+            <Color x:Key="SuccesColor">#2ecc71</Color>
+            <Color x:Key="DangerColor">#e74c3c</Color>
+            <Color x:Key="PrimaryColor">#3498DB</Color>
+
+
+            <Color x:Key="HeaderTitleColor">#0498C6</Color>
+            <Color x:Key="GreyTextColor">#bdc3c7</Color>
+            <Color x:Key="WhiteBackgroundColor">White</Color>
+            <Color x:Key="ListLinks">#3498db</Color>
+            <Color x:Key="ListHeader">#34495e</Color>
+            <Color x:Key="BorderColor">#DDDDDD</Color>
+            <Color x:Key="MainBackgroundColor">#ecf0f1</Color>
+
+
+
+            <x:Double x:Key="XLargeFontSize">16</x:Double> //38
+            <x:Double x:Key="LargeFontSize">14</x:Double> //32
+            <x:Double x:Key="MediumFontSize">12</x:Double> //26
+            <x:Double x:Key="SmallFontSize">11</x:Double> //24
+
+
+
+            <OnPlatform x:Key="IranSans" x:TypeArguments="x:String" iOS="IRANSansWeb" Android="IRANSansWeb.ttf#IRANSansWeb" WinPhone="IRANSansWeb" />
+
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="FontFamily" Value="{DynamicResource IranSans}" />
+                <Setter Property="FontSize" Value="{DynamicResource MediumFontSize}" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource IranSans}" />
+                <Setter Property="FontSize" Value="{DynamicResource MediumFontSize}" />
+            </Style>
+
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="FontFamily" Value="{DynamicResource IranSans}" />
+                <Setter Property="FontSize" Value="{DynamicResource MediumFontSize}" />
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

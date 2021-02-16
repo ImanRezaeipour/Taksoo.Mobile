@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:userControls="clr-namespace:FontIconApp.UserControls;assembly=Taksoo"
+             xmlns:commonPage="clr-namespace:Taksoo.CommonPage;assembly=Taksoo"
+             xmlns:abstractions="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="Taksoo.Page.ProductDetails">
+    <ScrollView>
+        <AbsoluteLayout>
+            <ScrollView BackgroundColor="{StaticResource MainBackgroundColor}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Header-->
+                    <StackLayout 
+                    Grid.Row="0"
+                    Padding="6,0,6,0"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="Fill" 
+                    HorizontalOptions="Fill"
+                    Orientation="Horizontal">
+                        <StackLayout 
+                        Margin="0,5,0,5"
+                                 Orientation="Horizontal">
+                            <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAGlass}"
+                                                       HorizontalOptions="Start"
+                                                       VerticalTextAlignment="Center"
+                                                       Opacity="0.7"
+                                                       TextColor="#95a5a6"
+                                                       VerticalOptions="Center"
+                                                       FontSize="14" 
+                                                       Margin="2">
+                                <userControls:FontAwesomeLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                                </userControls:FontAwesomeLabel.GestureRecognizers>
+                            </userControls:FontAwesomeLabel>
+
+                            <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAShoppingCart}"
+                                                       HorizontalOptions="Start"
+                                                       Opacity="0.7"
+                                                       TextColor="#95a5a6"
+                                                       VerticalOptions="Center"
+                                                       FontSize="14" Margin="2"/>
+                        </StackLayout>
+                        <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAArrowRight}"
+                                                   HorizontalOptions="EndAndExpand"
+                                                   Opacity="0.7"
+                                                   TextColor="#95a5a6"
+                                                   VerticalOptions="Center"
+                                                   VerticalTextAlignment="Center"
+                                                  
+                                                   FontSize="14" Margin="2"/>
+
+
+
+                    </StackLayout>
+                    <!--Slider-->
+                    <StackLayout
+                    Grid.Row="1"
+                    BackgroundColor="White"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions> 
+                            <Image 
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                            Source="tea.png"
+                            Aspect="AspectFit"/>
+                        </Grid>
+                      
+                    </StackLayout>
+                    <!--ProductName-->
+                    <StackLayout 
+                    Grid.Row="2" 
+                    Padding="5" 
+                    BackgroundColor="White" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="6*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout 
+                          Grid.Row="0" 
+                          HorizontalOptions="FillAndExpand"
+                          Grid.Column="0" 
+                          Orientation="Horizontal">
+                                <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAHeart}"
+                                                         Opacity="0.7"
+                                                           HorizontalTextAlignment="Start"
+                                                           HorizontalOptions="Start"
+                                                         TextColor="#95a5a6"
+                                                         VerticalOptions="Center"
+                                                         FontSize="14" Margin="2"/>
+                                <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAShareAlt}"
+                                                         Opacity="0.7"
+                                                         HorizontalOptions="Start"
+                                                         HorizontalTextAlignment="Start"
+                                                         TextColor="#95a5a6"
+                                                         VerticalOptions="Center"
+                                                         FontSize="14"
+                                                         />
+                            </StackLayout>
+                            <StackLayout 
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          HorizontalOptions="EndAndExpand">
+                                <Label Text="چای تکسو" 
+                                 FontFamily="{StaticResource IranSans}"
+                                 TextColor="Black"
+                                 FontSize="{StaticResource SmallFontSize}"></Label>
+                            </StackLayout>
+                            <StackLayout 
+                          Grid.Row="2"
+                          Grid.Column="1" 
+                          HorizontalOptions="EndAndExpand"
+                          Orientation="Horizontal">
+                                <Label 
+                              Text="شگفت انگیز"
+                              HorizontalTextAlignment="Start"
+                              TextColor="{StaticResource HeaderBackgroundColor}" 
+                              FontSize="{StaticResource MediumFontSize}"
+                              FontFamily="{StaticResource IranSans}"/>
+                                <Label 
+                              Text="پیشنهاد"
+                              HorizontalTextAlignment="Start"
+                              TextColor="Black" 
+                              FontSize="{StaticResource MediumFontSize}"
+                              FontFamily="{StaticResource IranSans}"/>
+
+
+                            </StackLayout>
+                            <StackLayout 
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            HorizontalOptions="StartAndExpand"
+                            Orientation="Horizontal">
+                                <Frame 
+                                HasShadow="True"
+                                BackgroundColor="{StaticResource CountDownBackgroundColor}"
+                                HorizontalOptions="FillAndExpand"
+                                Padding="2,0,2,0">
+                                    <Label 
+                                     TextColor="{StaticResource WhiteTextColor}"
+                                                FontSize="{StaticResource SmallFontSize}"
+                                     Text="25">
+                                    </Label>
+                                </Frame>
+                                <Label 
+                                TextColor="{StaticResource CountDownBackgroundColor}"
+                                FontSize="{StaticResource SmallFontSize}"
+                                Text=":">
+                                </Label>
+                                <Frame 
+                                HorizontalOptions="FillAndExpand"
+                                HasShadow="True"
+                                BackgroundColor="{StaticResource CountDownBackgroundColor}"
+                                Padding="2,0,2,0">
+                                    <Label 
+                                    TextColor="{StaticResource WhiteTextColor}"
+                                    FontSize="{StaticResource SmallFontSize}"
+                                    Text="28">
+                                    </Label>
+                                </Frame>
+                                <Label 
+                                TextColor="{StaticResource CountDownBackgroundColor}"
+                                FontSize="{StaticResource SmallFontSize}"
+                                Text=":">
+                                </Label>
+                                <Frame 
+                                HorizontalOptions="FillAndExpand"
+                                HasShadow="True"
+                                BackgroundColor="{StaticResource CountDownBackgroundColor}"
+                                Padding="2,0,2,0">
+                                    <Label 
+                                    TextColor="{StaticResource WhiteTextColor}"
+                                    FontSize="{StaticResource SmallFontSize}"
+                                    Text="08">
+                                    </Label>
+                                </Frame>
+
+
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <!--Content-->
+                    <StackLayout 
+                        Grid.Row="3" 
+                        Padding="5,0,5,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="150"/>
+                            </Grid.RowDefinitions>
+
+                            <!--TwoFrame-->
+                            <StackLayout 
+                        Grid.Row="0" 
+                        HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="FillAndExpand">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame 
+                                Grid.Column="0" 
+                                   HasShadow="True"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand">
+                                        <StackLayout 
+                                    Orientation="Horizontal" 
+                                    VerticalOptions="FillAndExpand" 
+                                    HorizontalOptions="FillAndExpand">
+                                            <Label 
+                                    Text="نظرات کاربران" 
+                                        FontFamily="{StaticResource IranSans}"
+                                    FontSize="10"
+                                    TextColor="{StaticResource BlackTextColor}"
+                                    HorizontalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand">
+                                            </Label>
+                                            <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAComments}"
+                                                               Opacity="0.7"
+                                                               HorizontalTextAlignment="End"
+                                                               HorizontalOptions="EndAndExpand"
+                                                               TextColor="#95a5a6"
+                                                               VerticalOptions="Center"
+                                                               FontSize="14" Margin="2"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame
+                                   Grid.Column="1"
+                                   HasShadow="True"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand">
+                                        <StackLayout 
+                                    Orientation="Horizontal" 
+                                    VerticalOptions="FillAndExpand" 
+                                    HorizontalOptions="FillAndExpand">
+                                            <Label 
+                                        Text="مشخصات" 
+                                        FontFamily="{StaticResource IranSans}"
+                                        FontSize="10"
+                                        TextColor="{StaticResource BlackTextColor}"
+                                        HorizontalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand">
+                                            </Label>
+                                            <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FANewspaperO}"
+                                                                   Opacity="0.7"
+                                                                   HorizontalTextAlignment="End"
+                                                                   HorizontalOptions="EndAndExpand"
+                                                                   TextColor="#95a5a6"
+                                                                   VerticalOptions="Center"
+                                                                   FontSize="14" Margin="2"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </StackLayout>
+                            <!--ProductDetails-->
+                            <StackLayout Grid.Row="1"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Frame Padding="8" HasShadow="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition Height="3*"/>
+                                        </Grid.RowDefinitions>
+                                        <StackLayout 
+                                    Grid.Row="0" 
+                                    VerticalOptions="StartAndExpand" 
+                                    HorizontalOptions="StartAndExpand"
+                                    Orientation="Horizontal">
+                                            <StackLayout 
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="FillAndExpand"
+                                        Orientation="Horizontal">
+                                                <Label 
+                                            Text="تومان" 
+                                         
+                                            TextColor="Lime"
+                                            FontSize="{StaticResource SmallFontSize}"
+                                            FontFamily="{StaticResource IranSans}"></Label>
+                                                <Label 
+                                            Text="1,999,000" 
+                                              HorizontalOptions="FillAndExpand"
+                                            TextColor="Lime"
+                                                FontSize="{StaticResource SmallFontSize}"
+                                            FontFamily="{StaticResource IranSans}"></Label>
+                                            </StackLayout>
+                                            <AbsoluteLayout    
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand">
+                                                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                                    <Label 
+                                            TextColor="Red"
+                                            Text="تومان" 
+                                            FontSize="7" 
+                                            HorizontalTextAlignment="Start"
+                                            VerticalTextAlignment="Center"
+                                            FontFamily="{StaticResource IranSans}"/>
+                                                    <Label 
+                                            TextColor="Red"
+                                            Text="2,500,000" 
+                                            VerticalTextAlignment="Center"
+                                            FontSize="7" 
+                                            HorizontalTextAlignment="Start"
+                                            FontFamily="{StaticResource IranSans}"/>
+                                                </StackLayout>
+                                                <BoxView 
+                                            Opacity="1"
+                                            Color="Red"
+                                            HeightRequest="1"
+                                                    HorizontalOptions="FillAndExpand"
+                                            AbsoluteLayout.LayoutBounds=".0,.25,1.1,.05" 
+                                            AbsoluteLayout.LayoutFlags="All">
+
+                                                </BoxView>
+                                            </AbsoluteLayout>
+                                        </StackLayout>
+                                        <StackLayout 
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Grid.Row="1"
+                                            Orientation="Horizontal">
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="5656565"
+                                                       FontFamily="{StaticResource IranSans}"
+                                                       FontSize="{StaticResource SmallFontSize}"
+                                                       TextColor="{StaticResource BlackTextColor}"></Label>
+                                            </StackLayout>
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="شماره بارکد کارخانه"
+                                           FontFamily="{StaticResource IranSans}"
+                                           FontSize="{StaticResource SmallFontSize}"
+                                           TextColor="{StaticResource GreyTextColor}"></Label>
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                        <StackLayout 
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            Grid.Row="2"
+                                            Orientation="Horizontal">
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="5656565"
+                                                       FontFamily="{StaticResource IranSans}"
+                                                       FontSize="{StaticResource SmallFontSize}"
+                                                       TextColor="{StaticResource BlackTextColor}"></Label>
+                                            </StackLayout>
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="SKU"
+                                                       FontFamily="{StaticResource IranSans}"
+                                                       FontSize="{StaticResource SmallFontSize}"
+                                                       TextColor="{StaticResource GreyTextColor}"></Label>
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                        <StackLayout 
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            Grid.Row="3"
+                                            Orientation="Horizontal">
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="10332"
+                                                       FontFamily="{StaticResource IranSans}"
+                                                       FontSize="{StaticResource SmallFontSize}"
+                                                       TextColor="{StaticResource BlackTextColor}"></Label>
+                                            </StackLayout>
+                                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                                <Label Text="تعداد موجود"
+                                                       FontFamily="{StaticResource IranSans}"
+                                                       FontSize="{StaticResource SmallFontSize}"
+                                                       TextColor="{StaticResource GreyTextColor}"></Label>
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                        <StackLayout
+                                            Grid.Row="4">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="6*"/>
+                                                    <ColumnDefinition Width="2*"/>
+
+                                                </Grid.ColumnDefinitions>
+                                                <Frame 
+                                                    Padding="5"
+                                                    Grid.Column="1" 
+                                                    BackgroundColor="{StaticResource SuccesColor}">
+                                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                    <Label FontFamily="{StaticResource IranSans}"
+                                                           FontSize="12"
+                                                           TextColor="{StaticResource WhiteTextColor}"
+                                                           VerticalTextAlignment="Center"
+                                                           Text="افزودن به سبد خرید"></Label>
+                                                    <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FACartPlus}"
+                                                                                   Opacity="0.7"
+                                                                                   HorizontalTextAlignment="Start"
+                                                                                   HorizontalOptions="StartAndExpand"
+                                                                                   TextColor="{StaticResource WhiteTextColor}"
+                                                                                   VerticalOptions="Center"
+                                                                                   VerticalTextAlignment="Center"
+                                                                                   FontSize="14" />
+</StackLayout>
+                                                </Frame>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Grid>
+                                    
+                                </Frame>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+
+            <!--Alert Window-->
+
+            <Frame 
+            Opacity="1"
+            HasShadow="True"
+            IsVisible="False" 
+            x:Name="PopUp" 
+            BackgroundColor="#ecf0f1"  
+            AbsoluteLayout.LayoutBounds=".1,.1,.50,.30" 
+            AbsoluteLayout.LayoutFlags="All" Padding="5">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="9*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>

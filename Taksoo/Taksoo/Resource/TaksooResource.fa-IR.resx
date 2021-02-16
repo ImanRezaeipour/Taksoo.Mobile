@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="ConfirmationCode" xml:space="preserve">
+    <value>کد تایید</value>
+  </data>
+  <data name="ConfirmNumber" xml:space="preserve">
+    <value>تایید شماره</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>ادامه</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>هزینه</value>
+  </data>
+  <data name="DehkadehRules" xml:space="preserve">
+    <value>لطفا شرایط و قوانین استفاده از دهکده را مطالعه نمایید.</value>
+  </data>
+  <data name="Taksoo" xml:space="preserve">
+    <value>دهکده</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>مقصد</value>
+  </data>
+  <data name="DestinationConfirm" xml:space="preserve">
+    <value>تایید مقصد</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>فاصله</value>
+  </data>
+  <data name="DriverNotFound" xml:space="preserve">
+    <value>متاسفانه راننده ای پیدا نشد</value>
+  </data>
+  <data name="DuplicateValue" xml:space="preserve">
+    <value>{0} تکراری می باشد</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="EqualNumberValue" xml:space="preserve">
+    <value>{0} باید دارای {1} رقم باشد</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="GooglePlayServiceUpdateMessage" xml:space="preserve">
+    <value>آیا میخوهید آن را آپدیت نمائید؟</value>
+  </data>
+  <data name="GooglePlayServiceUpdateTitle" xml:space="preserve">
+    <value>Google Play Service آپدیت نیست</value>
+  </data>
+  <data name="GreaterThanValue" xml:space="preserve">
+    <value>{0} باید از {1} بزرگتر باشد</value>
+  </data>
+  <data name="GreaterThanValueOrEqualTo" xml:space="preserve">
+    <value>{0} باید از {1} بزرگتر یا مساوی باشد</value>
+  </data>
+  <data name="HashedPassword" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="InValid" xml:space="preserve">
+    <value>{0} نامعتبر می باشد</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>فعالسازی</value>
+  </data>
+  <data name="IsAuthenticated" xml:space="preserve">
+    <value>اجازه ورود</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="LessThanString" xml:space="preserve">
+    <value>{0} باید از {1} کوچکتر باشد</value>
+  </data>
+  <data name="LessThanValue" xml:space="preserve">
+    <value>{0} باید از {1} کوچکتر باشد</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>محل جغرافیائی</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="LogInDehkadeh" xml:space="preserve">
+    <value>ورود به دهکده</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>شماره تلفن</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>ترتیب</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>رمز عبور</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>لطفا منتظر بمانید</value>
+  </data>
+  <data name="RangeString" xml:space="preserve">
+    <value>طول رشته {0} باید بین {1} و {2} کاراکتر باشد</value>
+  </data>
+  <data name="RangeValue" xml:space="preserve">
+    <value>{0} باید بین دو مقدار {1} و {2} باشد</value>
+  </data>
+  <data name="ReagentCodeOptional" xml:space="preserve">
+    <value>کد معرف (اختیاری)</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="RegisterBefore" xml:space="preserve">
+    <value>در صورتیکه قبلا ثبت نام کرده اید، اینجا کلیک نمایید.</value>
+  </data>
+  <data name="RegisterDehkadeh" xml:space="preserve">
+    <value>برای ورود به صفحه ثبت نام، اینجا کلیک نمایید.</value>
+  </data>
+  <data name="RegisterInDehkadeh" xml:space="preserve">
+    <value>ثبت نام در دهکده</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>{0} اجباری می باشد</value>
+  </data>
+  <data name="ReSendCode" xml:space="preserve">
+    <value>کد تایید مجددا ارسال شود.</value>
+  </data>
+  <data name="Salt" xml:space="preserve">
+    <value>Salt</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+  <data name="SendCode" xml:space="preserve">
+    <value>کد ارسال شده</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>مبدا</value>
+  </data>
+  <data name="SourceConfirm" xml:space="preserve">
+    <value>تایید مبدا</value>
+  </data>
+  <data name="TotalCost" xml:space="preserve">
+    <value>هزینه کلی</value>
+  </data>
+  <data name="TotalDistance" xml:space="preserve">
+    <value>فاصله کلی</value>
+  </data>
+  <data name="TotalTime" xml:space="preserve">
+    <value>زمان کلی</value>
+  </data>
+  <data name="TripCostToman" xml:space="preserve">
+    <value>هزینه سفر : {0} تومان</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="AddressSearch" xml:space="preserve">
+    <value>جستجوی آدرس</value>
+  </data>
+  <data name="PassengerDetails" xml:space="preserve">
+    <value>مشخصات مسافر</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Specifications" xml:space="preserve">
+    <value>مشخصات</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>اعتبار</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>گردش حساب</value>
+  </data>
+  <data name="signout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="ViewHelpagain" xml:space="preserve">
+    <value>نمایش دوباره رهنما</value>
+  </data>
+  <data name="ImCommingNow" xml:space="preserve">
+    <value>الان میرسم</value>
+  </data>
+  <data name="MessageToDriver" xml:space="preserve">
+    <value>ارسال پیام به راننده</value>
+  </data>
+  <data name="FreeTrip" xml:space="preserve">
+    <value>سفر رایگان</value>
+  </data>
+  <data name="FreeTripText" xml:space="preserve">
+    <value>کاربر گرامی با معرفی دوستان و آشنایان خود به تاکسی دهکده، از ما یک سفر مجانی برای خود و یک سفر رایگان برای دوستتان دریافت کنید! کافیس دوست شما کد زیر را در هنگام ثبت نام وارد نماید.</value>
+  </data>
+  <data name="ReagentCodeMustBeSixCharecter" xml:space="preserve">
+    <value>کد معرف نباید بیشتر از 6 کارکتر باشد</value>
+  </data>
+  <data name="WrongInformation" xml:space="preserve">
+    <value>اطلاعات وارد شده اشتباه است</value>
+  </data>
+  <data name="RequredFirstLastName" xml:space="preserve">
+    <value>وارد کردن نام خانوادگی اجباری میباشد</value>
+  </data>
+  <data name="RequredFirstName" xml:space="preserve">
+    <value>وارد کردن نام اجباری میباشد</value>
+  </data>
+  <data name="ArrivingAfterFiverMin" xml:space="preserve">
+    <value>تا 5 دقیقه دیگر میرسم</value>
+  </data>
+  <data name="ArrivingJustNow" xml:space="preserve">
+    <value>الان میرسم</value>
+  </data>
+  <data name="PleaseCallMe" xml:space="preserve">
+    <value>لطفا با من تماس بگیرید</value>
+  </data>
+  <data name="InivitationMessage" xml:space="preserve">
+    <value>"با ثبت نام در دهکده یک سفر رایگان دریافت نمایید. از طریق دهکده می توانید از هر کجا که هستید سفری ارزان، امن و با کیفیت را تجربه کنید.  "</value>
+  </data>
+  <data name="IncreaseCredit" xml:space="preserve">
+    <value>افزایش اعتبار</value>
+  </data>
+  <data name="IncreaseCreditByRecharge" xml:space="preserve">
+    <value>افزایش اعتبار از طریق واریز مستقیم</value>
+  </data>
+  <data name="ReduceCredit" xml:space="preserve">
+    <value>کاهش اعتبار</value>
+  </data>
+  <data name="Reducetravelcosts" xml:space="preserve">
+    <value>کاهش هزینه سفر </value>
+  </data>
+  <data name="YourScoreToDriver" xml:space="preserve">
+    <value>امتیاز شما به راننده</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>روش پرداخت</value>
+  </data>
+  <data name="TripCost" xml:space="preserve">
+    <value>هزینه سفر</value>
+  </data>
+  <data name="AddSelectedAddress" xml:space="preserve">
+    <value>ثبت آدرس</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>اطلاعات تماس</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>موجودی</value>
+  </data>
+  <data name="Increasetheamountofredityouwant" xml:space="preserve">
+    <value>افزایش اعتبار به میزان دلخواه</value>
+  </data>
+</root>

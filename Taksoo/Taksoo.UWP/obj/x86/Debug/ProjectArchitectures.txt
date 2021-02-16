@@ -1,0 +1,7 @@
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo.Mobile.Common\Taksoo.Common\Taksoo.Mobile.Common.csproj;neutral
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo.Mobile.Common\Taksoo.Common\Taksoo.Mobile.Common.csproj;neutral
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo.Mobile.Data\Taksoo.Mobile.Data\Taksoo.Mobile.Data.csproj;neutral
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo.Mobile.Data\Taksoo.Mobile.Data\Taksoo.Mobile.Data.csproj;neutral
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo.Mobile.Service\Taksoo.Mobile.Service\Taksoo.Service.csproj;neutral
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo\Taksoo.UWP\Taksoo.UWP.csproj;x86
+C:\Users\Mostafa\Desktop\Taksoo.Mobile\Taksoo\Taksoo\Taksoo.csproj;neutral

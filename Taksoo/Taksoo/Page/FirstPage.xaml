@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:userControls="clr-namespace:FontIconApp.UserControls;assembly=Taksoo"
+             x:Class="Taksoo.Page.FirstPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="TbItmCancel"
+                     Icon="search.png" >
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="LblSourceDestTextColor">#52575F</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView
+        Orientation="Vertical"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand">
+        <Grid RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="260"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="280"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <!--slider-->
+            <StackLayout
+                Grid.Row="0"
+                BackgroundColor="White"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+              
+                    <Image 
+                       
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Source="bannerA.jpg"
+                        Aspect="AspectFill"/>
+               
+
+            </StackLayout>
+
+
+
+            <!--category-->
+            <StackLayout 
+                Grid.Row="1"
+                Orientation="Horizontal"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand" 
+                BackgroundColor="White"
+                x:Name="StkCat">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame 
+                        Padding="5"
+                        Grid.Column="1" 
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="{StaticResource SuccesColor}">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label FontFamily="{StaticResource IranSans}"
+                                   FontSize="12"
+                                   TextColor="{StaticResource WhiteTextColor}"
+                                   VerticalTextAlignment="Center"
+                                   Text="لیست دسته بندی محصولات"></Label>
+                            <userControls:FontAwesomeLabel Text="{x:Static userControls:Icon.FAListAlt}"
+                                                           Opacity="0.7"
+                                                           HorizontalTextAlignment="Start"
+                                                           HorizontalOptions="StartAndExpand"
+                                                           TextColor="{StaticResource WhiteTextColor}"
+                                                           VerticalOptions="Center"
+                                                           VerticalTextAlignment="Center"
+                                                           FontSize="14" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CategorygestureRecognizerOnTapped"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+                <!--<ScrollView
+                x:Name="ScrlCat" 
+                Orientation="Horizontal">
+                </ScrollView>-->
+            </StackLayout>
+            <!--offerText-->
+            <StackLayout 
+                
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White" 
+                Grid.Row="2">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="5,0,5,0" VerticalOptions="CenterAndExpand">
+                    <Label  VerticalTextAlignment="Center" 
+                       
+                        FontSize="27" 
+                        FontFamily="{StaticResource IranSans}" 
+                        TextColor="#e74c3c" 
+                        Text="شگفت انگیز"></Label>
+                    <Label VerticalTextAlignment="Center"
+                      
+                       FontSize="27" 
+                       FontFamily="{StaticResource IranSans}" 
+                       TextColor="#2c3e50" 
+                       Text="پیشنهاد"></Label>
+                </StackLayout>
+
+            </StackLayout>
+            <!--productSlide-->
+            <StackLayout 
+                Orientation="Horizontal"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="White"
+                Grid.Row="3"
+                x:Name="productSlide">
+                <ScrollView Orientation="Horizontal" x:Name="ScrlProduct">
+
+                </ScrollView>
+            </StackLayout>
+            <!--offer1-->
+            <StackLayout 
+                       Grid.Row="4"
+                       HorizontalOptions="FillAndExpand"
+                BackgroundColor="Blue">
+                <!--<Image 
+                    Aspect="AspectFit"
+                    Source="bigbanner.jpg">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Offer1_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>-->
+            </StackLayout>
+            <!--offer2-->
+            <StackLayout Grid.Row="5"
+                        HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand"
+                         Padding="5">
+                <Frame  
+                    BackgroundColor="Fuchsia"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="True">
+
+                </Frame>
+                <!--<Image 
+                    Aspect="AspectFit"
+                    Source="bigbanner.jpg">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Offer1_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>-->
+            </StackLayout>
+            <!--offer3-->
+            <StackLayout 
+                Grid.Row="6"
+                VerticalOptions="FillAndExpand" 
+                Padding="5"
+                HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                <Frame 
+                    HasShadow="True"
+                        BackgroundColor="Aqua"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+
+                </Frame>
+                <Frame
+                        HasShadow="True"
+                        BackgroundColor="Blue"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+
+                </Frame>
+            </StackLayout>
+            <!--offer4-->
+            <StackLayout Grid.Row="7"
+                        HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand"
+                         Padding="5">
+                <Frame  
+                    BackgroundColor="Fuchsia"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="True">
+
+                </Frame>
+                <!--<Image 
+                    Aspect="AspectFit"
+                    Source="bigbanner.jpg">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Offer1_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>-->
+            </StackLayout>
+            <!--offer5-->
+            <StackLayout 
+                Grid.Row="8"
+                VerticalOptions="FillAndExpand" 
+                Padding="5"
+                HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                <Frame 
+                    HasShadow="True"
+                        BackgroundColor="Aqua"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+
+                </Frame>
+                <Frame
+                        HasShadow="True"
+                        BackgroundColor="Blue"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+
+                </Frame>
+            </StackLayout>
+
+            <!--AllCategory-->
+            <StackLayout Grid.Row="9" Orientation="Vertical">
+                <StackLayout 
+                        Orientation="Horizontal"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="White"
+                        x:Name="productSlides">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="8*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout
+                        Padding="5" Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="7*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label
+                                Text="جدیدترین محصولات"
+                                Grid.Column="1"
+                                HorizontalTextAlignment="End"
+                                FontFamily="{StaticResource IranSans}" 
+                                FontSize="{StaticResource MediumFontSize}"
+                                TextColor="{StaticResource ListHeader}"
+                                FontAttributes="Bold">
+
+                                </Label>
+                                <Label
+                                Grid.Column="0"
+                                   Text="لیست کامل"
+                                   HorizontalTextAlignment="Start"
+                                   FontFamily="{StaticResource IranSans}" 
+                                   FontSize="{StaticResource MediumFontSize}"
+                                   TextColor="{StaticResource ListLinks}">
+
+                                </Label>
+
+
+                            </Grid>
+
+                        </StackLayout>
+
+                        <ScrollView Grid.Row="1" Orientation="Horizontal" x:Name="ScrlProducts">
+
+                        </ScrollView>
+                    </Grid>
+
+                </StackLayout>
+            </StackLayout>
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

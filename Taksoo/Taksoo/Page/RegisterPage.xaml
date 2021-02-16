@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:Taksoo.Resource;assembly=Taksoo"
+                      x:Class="Taksoo.Page.RegisterPage">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!--<Color x:Key="RegisterBackgroundColor">#232B36</Color>-->
+            <Color x:Key="RegisterEntryBorderColor">#3C4353</Color>
+            <Color x:Key="PlaceHolderColor">#656B73</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="AbsoluteLayout1">
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="{StaticResource HeaderBackgroundColor}">
+
+            <Grid Padding="10"
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+
+                <StackLayout Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <Label Text="{x:Static resource:TaksooResource.RegisterInDehkadeh}"
+               Style="{StaticResource LabelStyle}"
+               TextColor="{StaticResource WhiteTextColor}"
+               FontSize="{StaticResource XLargeFontSize}"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="1"
+                   Grid.Column="0"
+                   Padding="1"
+                   BackgroundColor="{StaticResource RegisterEntryBorderColor}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <StackLayout Padding="10,0,10,0"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="{StaticResource HeaderBackgroundColor}">
+
+                        <Entry Text="{Binding FirstName, Mode=TwoWay}"
+                 Keyboard="Default"
+                 Placeholder="{x:Static resource:TaksooResource.Name}"
+                 Style="{StaticResource EntryStyle}"
+                 TextColor="{StaticResource WhiteTextColor}"
+                 PlaceholderColor="{StaticResource PlaceHolderColor}"
+                 BackgroundColor="{StaticResource HeaderBackgroundColor}"
+                 HorizontalTextAlignment="End"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"/>
+
+
+
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="2"
+                   Grid.Column="0"
+                   Padding="1"
+                   BackgroundColor="{StaticResource RegisterEntryBorderColor}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <StackLayout  Padding="10,0,10,0"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      BackgroundColor="{StaticResource HeaderBackgroundColor}">
+
+                        <Entry Text="{Binding LastName, Mode=TwoWay}"
+                 Keyboard="Default"
+                 Placeholder="{x:Static resource:TaksooResource.LastName}"
+                 Style="{StaticResource EntryStyle}"
+                 TextColor="{StaticResource WhiteTextColor}"
+                 PlaceholderColor="{StaticResource PlaceHolderColor}"
+                 BackgroundColor="{StaticResource HeaderBackgroundColor}"
+                 HorizontalTextAlignment="End"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="3"
+                   Grid.Column="0"
+                   Padding="1"
+                   BackgroundColor="{StaticResource RegisterEntryBorderColor}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <StackLayout  Padding="10,0,10,0"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                      BackgroundColor="{StaticResource HeaderBackgroundColor}">
+
+                        <Entry Text="{Binding UserViewModel.Mobile, Mode=TwoWay}"
+                 Keyboard="Telephone"
+                 Placeholder="{x:Static resource:TaksooResource.Mobile}"
+                 Style="{StaticResource EntryStyle}"
+                 TextColor="{StaticResource WhiteTextColor}"
+                 PlaceholderColor="{StaticResource PlaceHolderColor}"
+                 BackgroundColor="{StaticResource HeaderBackgroundColor}"
+                 HorizontalTextAlignment="End"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4"
+                   Grid.Column="0"
+                   Padding="1"
+                   BackgroundColor="{StaticResource RegisterEntryBorderColor}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <StackLayout  Padding="10,0,10,0"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      BackgroundColor="{StaticResource HeaderBackgroundColor}">
+
+                        <Entry Text="{Binding ReagentCode, Mode=TwoWay}"
+                 Placeholder="{x:Static resource:TaksooResource.ReagentCodeOptional}"
+                 Style="{StaticResource EntryStyle}"
+                 TextColor="{StaticResource WhiteTextColor}"
+                 PlaceholderColor="{StaticResource PlaceHolderColor}"
+                 BackgroundColor="{StaticResource HeaderBackgroundColor}"
+                 HorizontalTextAlignment="End"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="5"
+                   Grid.Column="0"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <Label Text="{x:Static resource:TaksooResource.DehkadehRules}"
+               Style="{StaticResource LabelStyle}"
+               TextColor="{StaticResource WhiteTextColor}"
+               FontSize="{StaticResource SmallFontSize}"
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="6"
+                   Grid.Column="0"
+                   Padding="1"
+                   BackgroundColor="{StaticResource RegisterEntryBorderColor}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+
+                    <StackLayout x:Name="StkLytSubmit"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="{StaticResource DefaultBackgroundColor}">
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnStkLytSubmitTapped"/>
+                        </StackLayout.GestureRecognizers>
+
+                        <Label Text="{x:Static resource:TaksooResource.Register}"
+                 Style="{StaticResource LabelStyle}"
+                 TextColor="{StaticResource WhiteTextColor}"
+                 FontSize="{StaticResource LargeFontSize}"
+                 VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand"/>
+
+                        <!--<Button Text="{x:Static resource:TaksooResource.Register}"
+                  Style="{StaticResource ButtonStyle}"
+                  TextColor="{StaticResource WhiteTextColor}"
+                  FontSize="{StaticResource HeaderFontSize}"
+                  BackgroundColor="{StaticResource DefaultBackgroundColor}"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  Clicked="BtnSumbit_OnClicked"/>-->
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="7"
+                   Grid.Column="0"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnRegisterBeforeTapped"/>
+                    </StackLayout.GestureRecognizers>
+
+                    <Label Text="{x:Static resource:TaksooResource.RegisterBefore}"
+               Style="{StaticResource LabelStyle}"
+               TextColor="{StaticResource HeaderTitleColor}"
+               FontSize="{StaticResource SmallFontSize}"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand">
+
+                    </Label>
+
+                </StackLayout>
+
+            </Grid>
+
+        </StackLayout>
+
+        <StackLayout 
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All" 
+            BackgroundColor="Black" 
+            Opacity="0.7"
+            x:Name="Indicator" 
+            IsVisible="False">
+            <ActivityIndicator   AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                 AbsoluteLayout.LayoutFlags="All" 
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="CenterAndExpand" 
+                              
+                                 IsVisible="True" 
+                                 IsEnabled="True"
+                                 IsRunning="True">
+
+
+            </ActivityIndicator>
+        </StackLayout>
+ 
+        
+    </AbsoluteLayout>
+</ContentPage>

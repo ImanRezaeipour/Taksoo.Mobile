@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:resource="clr-namespace:Taksoo.Resource;assembly=Taksoo"
+               xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+               x:Class="Taksoo.Page.DetailPage"
+              >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ContentBackgroundColor"></Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="TblDetails" Icon="appbaredit.png" Text="Details" Clicked="TlbDetails_OnClicked">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout 
+                         VerticalOptions="FillAndExpand" 
+                         HorizontalOptions="FillAndExpand">
+
+                <Grid RowSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.6*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.6*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.6*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.6*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--تصویر مسافر-->
+                    <StackLayout   
+                        Grid.Row="0" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#ecf0f1">
+                        <Grid HorizontalOptions="FillAndExpand" 
+                              VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <controls:CircleImage Source="usericon.png" 
+                                                      Aspect="AspectFit" 
+                                                      VerticalOptions="FillAndExpand"
+                                                      HorizontalOptions="FillAndExpand" 
+                                                      Grid.Row="1"
+                                                      Grid.Column="1">
+
+                            </controls:CircleImage>
+                            <StackLayout Grid.Column="1" 
+                                         Grid.Row="2"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="Center">
+                                <Label Text="{Binding FullName}" 
+                                       TextColor="#34495e"/>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <!--تلفن و ایمیل-->
+                    <StackLayout
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                        
+                        BackgroundColor="#EFEBE9">
+                        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label 
+                            HorizontalOptions="EndAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                            Text="{x:Static resource:TaksooResource.ContactInfo}"
+                           TextColor="#2c3e50"
+                           FontSize="16"/>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <StackLayout 
+                         
+                             BackgroundColor="#F9F9F9"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="1" >
+
+                                <Image Source="phone256.png" 
+                                       Aspect="AspectFill"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+
+
+                            <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"
+                                    Text="{Binding Mobile}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontSize="16" 
+                                    TextColor="#242424"/>
+                                    <Label Grid.Column="1" 
+                                           Text="{x:Static resource:TaksooResource.Mobile}" 
+                                   FontSize="14" 
+                                   HorizontalOptions="End" 
+                                   VerticalOptions="CenterAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="End"
+                                   TextColor="#34495e" 
+                                   Opacity="0.8"/>
+                                </Grid>
+                            </StackLayout>
+
+                            <BoxView 
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            HeightRequest="1" 
+                                 BackgroundColor="#A8A8A8" 
+                                VerticalOptions="End"
+                                 Margin="0,5,0,0" 
+                            Opacity="0.5"/>
+
+                            <StackLayout Grid.Row="1" Grid.Column="1" Padding="20">
+                                <Image Source="emailicon.png"  
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Aspect="AspectFit"
+                            />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"
+                                           Text="{Binding Email}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="16" 
+                                           TextColor="#242424"/>
+                                    <Label 
+                                        Grid.Column="1" 
+                                        Text="{x:Static resource:TaksooResource.Email}" 
+                                           FontSize="14" 
+                                           HorizontalOptions="End" 
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="End"
+                                           TextColor="#34495e" 
+                                           Opacity="0.8"/>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <!--اعتبار-->
+                    <StackLayout
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                        BackgroundColor="#EFEBE9">
+                        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label 
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Text="{x:Static resource:TaksooResource.Credit}"
+                                    TextColor="#2c3e50"
+                                    FontSize="16"/>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <StackLayout 
+                        BackgroundColor="#F9F9F9"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="1" >
+
+                                <Image Source="icondollar.png" Aspect="AspectFill" HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+
+
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"
+                                           Text="{Binding Inventory}"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="16" 
+                                           TextColor="#242424"/>
+                                    <Label Grid.Column="1" 
+                                   Text="{x:Static resource:TaksooResource.Inventory}" 
+                                           FontSize="14" 
+                                           HorizontalOptions="End" 
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="End"
+                                           TextColor="#34495e" 
+                                           Opacity="0.8"/>
+                                </Grid>
+                            </StackLayout>
+
+                            <BoxView 
+                                Grid.Row="0" 
+                                Grid.Column="0" 
+                                HeightRequest="1" 
+                                BackgroundColor="#A8A8A8" 
+                                VerticalOptions="End"
+                                Margin="0,5,0,0" 
+                                Opacity="0.5"/>
+
+                            <StackLayout Grid.Row="1" Grid.Column="1" Padding="20">
+                                <Image Source="iconhistory.png"  
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       Aspect="AspectFit"
+                                />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="16" 
+                                           TextColor="#242424"/>
+                                    <Label Grid.Column="1"  Text="{x:Static resource:TaksooResource.Turnover}" 
+                                           FontSize="14" 
+                                           HorizontalOptions="End" 
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="End"
+                                           TextColor="#34495e" 
+                                           Opacity="0.8">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="UserTurnover"></TapGestureRecognizer>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <!--مشخصات-->
+                    <StackLayout
+                        Grid.Row="5" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                        
+                        BackgroundColor="#EFEBE9">
+                        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="2*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label 
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Text="{x:Static resource:TaksooResource.Specifications}"
+                                    TextColor="#2c3e50"
+                                    FontSize="16"/>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                    <StackLayout 
+                         
+                        BackgroundColor="#F9F9F9"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="1" >
+
+                                <Image Source="Guid.png" Aspect="AspectFill" HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+
+
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                  
+                                    <Label
+                                            Grid.Column="1"
+                                           Text="{x:Static resource:TaksooResource.ViewHelpagain}" 
+                                           FontSize="14" 
+                                           HorizontalOptions="End" 
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#34495e" 
+                                           Opacity="0.8"/>
+                                </Grid>
+                            </StackLayout>
+
+                            <BoxView 
+                                Grid.Row="0" 
+                                Grid.Column="0" 
+                                HeightRequest="1" 
+                                BackgroundColor="#A8A8A8" 
+                                VerticalOptions="End"
+                                Margin="0,5,0,0" 
+                                Opacity="0.5"/>
+
+                            <StackLayout Grid.Row="1" Grid.Column="1" Padding="20">
+                                <Image Source="Signout.png"  
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       Aspect="AspectFit"
+                                />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                   
+                                    <Label Grid.Column="1"
+                                           Text="{x:Static resource:TaksooResource.signout}" 
+                                           FontSize="14" 
+                                           HorizontalOptions="End" 
+                                           VerticalOptions="CenterAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="End"
+                                           TextColor="#34495e" 
+                                           Opacity="0.8"/>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                   
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

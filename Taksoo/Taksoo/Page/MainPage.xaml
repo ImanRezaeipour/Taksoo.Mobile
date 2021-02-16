@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                           xmlns:page="clr-namespace:Taksoo.Page;assembly=Taksoo"
+                           x:Class="Taksoo.Page.MainPage"
+                           MasterBehavior="SplitOnPortrait">
+
+    <!--<MasterDetailPage.ToolbarItems>
+        <ToolbarItem x:Name="TbItmNav"
+                     Clicked="TbItmNav_OnClicked"
+                     Text="nav">
+        </ToolbarItem>
+    </MasterDetailPage.ToolbarItems>-->
+    <MasterDetailPage.Master>
+        <page:MenuPage x:Name="MenuPage"/>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <!--<x:Arguments>
+                <page:MapPage />
+            </x:Arguments>-->
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>  
